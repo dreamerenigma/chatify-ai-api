@@ -46,3 +46,6 @@ Desktop.ini
 .tmp/
 .temp/
 .cache/
+
+# Prisma generated client
+/src/generated/prisma/

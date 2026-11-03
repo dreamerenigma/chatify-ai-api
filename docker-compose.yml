@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: chatify-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: chatify_dev_password
+      POSTGRES_DB: chatify
+    ports:
+      - "5432:5432"
+    volumes:
+      - chatify_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  chatify_postgres_data:
+  
